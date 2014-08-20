@@ -6,7 +6,7 @@ pygments:         true
 permalink:        pretty
 
 # Setup
-title:            Ethan Rosenthal
+title:            Data Piques
 tagline:          blog for ethan rosenthal
 url:              http://blog.ethanrosenthal.com
 paginate:         1
