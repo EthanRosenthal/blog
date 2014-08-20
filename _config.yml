@@ -8,7 +8,7 @@ permalink:        pretty
 # Setup
 title:            Ethan Rosenthal
 tagline:          blog for ethan rosenthal
-url:              http://ethanrosenthal.com
+url:              http://blog.ethanrosenthal.com
 paginate:         1
 baseurl:          /
 author:
@@ -18,11 +18,11 @@ author:
 # Custom vars
 version:          1.0.0
 github:
-  repo:           https://github.com/poole/poole
+  repo:           https://github.com/ethanrosenthal/blog
 
 # Header links
 pages_list:
   About: '/about/'
   Archive: '/archive/'
-  Feed: '/atom.xml/'
+  Feed: '/atom.xml'
 
