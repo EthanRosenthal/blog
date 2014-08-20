@@ -3,28 +3,14 @@ layout: page
 title: About
 ---
 
+Having spent over 7 years within the comfy confines of MATLAB, I recently started exploring the wide world of possibilites that exist outside of that expensive IDE. I invite you to come along with me while I document my journey into the great, open source, unknown.
+
+My name is Ethan Rosenthal, and I am currently a sixth-year PhD student studying experimental condensed matter physics at Columbia University in New York, NY.
+
+For more information about my academic research, check out my [website](http://ethanrosenthal.com).
+
+For the code behind this blog and other projects of mine, check out my [GitHub](https://github.com/EthanRosenthal).
+
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+    This blog was created using the <a href="https://github.com/poole/poole" target="_blank">Poole</a> template for the <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> static site generator.
 </p>
-
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
-
-There are currently two themes built on Poole:
-
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
