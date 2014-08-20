@@ -4,13 +4,28 @@
  <title>Poole</title>
  <link href="http://getpoole.com/atom.xml" rel="self"/>
  <link href="http://getpoole.com/"/>
- <updated>2014-08-15T09:31:19-04:00</updated>
+ <updated>2014-08-17T22:14:14-04:00</updated>
  <id>http://getpoole.com</id>
  <author>
    <name>Mark Otto</name>
    <email>markdotto@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Let's see how this works</title>
+   <link href="http://getpoole.com//2014/08/17/testing/"/>
+   <updated>2014-08-17T00:00:00-04:00</updated>
+   <id>http://getpoole.com/2014/08/17/testing</id>
+   <content type="html">&lt;ul&gt;
+&lt;li&gt;One asterisk
+** Two asterisks
+-----
+Below the slashes
+-----&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Introducing Poole</title>
