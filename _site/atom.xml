@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Poole</title>
- <link href="http://getpoole.com/atom.xml" rel="self"/>
- <link href="http://getpoole.com/"/>
- <updated>2014-08-17T22:14:14-04:00</updated>
- <id>http://getpoole.com</id>
+ <title>Ethan Rosenthal</title>
+ <link href="http://ethanrosenthal.com/atom.xml" rel="self"/>
+ <link href="http://ethanrosenthal.com/"/>
+ <updated>2014-08-19T23:51:15-04:00</updated>
+ <id>http://ethanrosenthal.com</id>
  <author>
-   <name>Mark Otto</name>
-   <email>markdotto@gmail.com</email>
+   <name>Ethan Rosenthal</name>
+   <email></email>
  </author>
 
  
  <entry>
    <title>Let's see how this works</title>
-   <link href="http://getpoole.com//2014/08/17/testing/"/>
+   <link href="http://ethanrosenthal.com//2014/08/17/testing/"/>
    <updated>2014-08-17T00:00:00-04:00</updated>
-   <id>http://getpoole.com/2014/08/17/testing</id>
+   <id>http://ethanrosenthal.com/2014/08/17/testing</id>
    <content type="html">&lt;ul&gt;
 &lt;li&gt;One asterisk
 ** Two asterisks
@@ -29,9 +29,9 @@ Below the slashes
  
  <entry>
    <title>Introducing Poole</title>
-   <link href="http://getpoole.com//2014/01/02/introducing-poole/"/>
+   <link href="http://ethanrosenthal.com//2014/01/02/introducing-poole/"/>
    <updated>2014-01-02T00:00:00-05:00</updated>
-   <id>http://getpoole.com/2014/01/02/introducing-poole</id>
+   <id>http://ethanrosenthal.com/2014/01/02/introducing-poole</id>
    <content type="html">&lt;p&gt;&lt;em&gt;The Strange Case of Dr. Jekyll and Mr. Hyde&lt;/em&gt; tells the story of a lawyer investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward Hyde. Chief among the novel&amp;#39;s supporting cast is a man by the name of Mr. Poole, Dr. Jekyll&amp;#39;s loyal butler.&lt;/p&gt;
 
 &lt;hr&gt;
@@ -76,9 +76,9 @@ Below the slashes
  
  <entry>
    <title>Example content</title>
-   <link href="http://getpoole.com//2014/01/01/example-content/"/>
+   <link href="http://ethanrosenthal.com//2014/01/01/example-content/"/>
    <updated>2014-01-01T00:00:00-05:00</updated>
-   <id>http://getpoole.com/2014/01/01/example-content</id>
+   <id>http://ethanrosenthal.com/2014/01/01/example-content</id>
    <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 &lt;/div&gt;
@@ -222,9 +222,9 @@ Below the slashes
  
  <entry>
    <title>What's Jekyll?</title>
-   <link href="http://getpoole.com//2013/12/31/whats-jekyll/"/>
+   <link href="http://ethanrosenthal.com//2013/12/31/whats-jekyll/"/>
    <updated>2013-12-31T00:00:00-05:00</updated>
-   <id>http://getpoole.com/2013/12/31/whats-jekyll</id>
+   <id>http://ethanrosenthal.com/2013/12/31/whats-jekyll</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/jekyll/jekyll/blob/master/README.markdown&quot;&gt;the project&amp;#39;s readme&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
