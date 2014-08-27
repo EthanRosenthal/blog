@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-comments: false
 ---
 <img style="float:left;padding-right:15px" src="/assets/img/profile.jpg" width="160" />
 
