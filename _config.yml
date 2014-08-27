@@ -26,5 +26,6 @@ github:
 pages_list:
   About: '/about/'
   Archive: '/archive/'
+  Website: 'http://ethanrosenthal.com'
   Feed: '/atom.xml'
-
+  
