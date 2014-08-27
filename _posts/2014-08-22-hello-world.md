@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Setting up a website and separate blog repository hosted on GitHub
+comments: true
 ---
 
 As the title of the blog suggests, I would like to use this space to write about anything "data"-related that piques my interest. Likely, this will consist of personal and academic projects.
@@ -9,19 +10,19 @@ As the title of this post suggests, I would like to explain how I created this b
 
 ## Setting up the website - [ethanrosenthal.com](http://ethanrosenthal.com)
 
-During my 5 years at Columbia, I have sporadically messed around with coding html and css in an attempt to make a personal website. Various iterations were hosted on the physics department servers, but, in the interest of long-term hosting, I decided to migrate everything to [GitHub](https://github.com/). This was largely inspired by this [blog post](http://joshualande.com/jekyll-github-pages-poole/) from [Joshua Lande](http://joshualande.com/), though implemented a bit differently.
+During my 5 years at Columbia, I have sporadically messed around with coding html and css in an attempt to make a personal website. Various iterations were hosted on the physics department servers, but, in the interest of long-term hosting, I decided to migrate everything to [GitHub](https://github.com/). This was largely inspired by these blog posts from [Joshua Lande](http://joshualande.com/jekyll-github-pages-poole/) and [Burton DeWilde](http://bdewilde.github.io/blog/2014/08/10/on-starting-over-with-jekyll/) though implemented a bit differently.
 
 #### GitHub Pages
 
-GitHub has a feature called [GitHub Pages](https://pages.github.com/) that provides one free website loper account. Setting up your free website is quite easy (and detailed better at the above link):
+GitHub has a feature called [GitHub Pages](https://pages.github.com/) that provides one free website per account. Setting up your free website is quite easy (and detailed better at the above link):
 
 + Create a new repository titled *username*.github.io
 + Clone the repository to your computer
 + "Initialize" the repo by creating an *index.html* file
 
-Your new GitHub website is now *username*.github.io. You can now build your website in the repo you created, and GitHub takes care of the rest.
+Your new GitHub website is *username*.github.io. You can now build your website in the repo you created, and GitHub takes care of the rest.
 
-All I had to do was copy all of the files from the Physics server into my new repo, and my website was built at [ethanrosenthal.github.io](ethanrosenthal.github.io) (because "ethanrosenthal" is my GitHub username).
+All I had to do was copy all of the files from the physics server into my new repo, and my website was built at [ethanrosenthal.github.io](ethanrosenthal.github.io) (because "ethanrosenthal" is my GitHub username).
 
 #### Adding a custom domain
 
@@ -37,7 +38,7 @@ Below is a screenshot of my filled in namecheap dashboard:
 
 ![namecheap dashboard]({{site.url}}/assets/img/2014-08-24-namecheap-dashboard.png)
 
-In addition to the above modifications that you have to make, you need to include a file in your *username*.github.io repo titled "CNAME" which contains your custom domain name in it. For example, mine simply says "ethanrosenthal.com". It may take some time for these changes to propagate throughout everything, but, eventually, pointing your browser at your custom domain should redirect to the GitHub Pages repo.
+In addition to the above modifications that you have to make, you need to include a file in your *username*.github.io repo titled "CNAME" which contains your custom domain name in it. For example, mine simply says "ethanrosenthal.com". It may take some time for these changes to fully propagate, but, eventually, your custom domain should successfully redirect to the GitHub Pages repo (though still display the custom domain in the url bar).
 
 ## Setting up the blog - [blog.ethanrosenthal.com](http://blog.ethanrosenthal.com)
 
@@ -51,7 +52,7 @@ Considering it took me many years to create my website, I opted to use a blog te
 jekyll serve
 ```
 
-in your terminal. Jekyll will now build a static website, as specified and layed-out by Poole, in the folder _site/. The key difference between your free GitHub website and GitHub Project Pages is that you need to push your website to a separate "gh-pages" branch in order to build the Project Pages website associated with your repository. So, after building your static website on your local machine, you must switch to the gh-pages branch, add/commit your files, and then push to GitHub. The Jekyll-build *repo* website will now be located at *username*.github.io/*repo*
+in your terminal. Jekyll will now build a static website, as specified and laid out by Poole, in the folder _site/. The key difference between your free GitHub website and GitHub Project Pages is that you need to push your website to a separate "gh-pages" branch in order to build the Project Pages website associated with your repository. So, after building your static website on your local machine, you must switch to the gh-pages branch, add/commit your files, and then push to GitHub. The Jekyll-built *repo* website will now be located at *username*.github.io/*repo*
 
 #### Custom Project Pages domains
 
@@ -61,4 +62,9 @@ __Host Name__ | __IP ADDRESS/URL__  | __RECORD TYPE__ | __TTL__
  ------------ | ------------------  | --------------- | --------
 blog          | ethanrosenthal.github.io. |  CNAME (Alias) | 1800
 
-I also added a CNAME file to the blog repo containing the line "blog.ethanrosenthal.com"
+I also added a CNAME file to the blog repo containing the line "blog.ethanrosenthal.com". Now, the blog is located at [blog.ethanrosenthal.com](http://blog.ethanrosenthal.com/), and everything redirects and formats fine.
+
+
+## Lastly
+
+There are a couple other things that I have done, like adding an [Archive]({{site.url}}/archive/) section and Google Analytics tracking, but these tasks have been documented the blog posts that I linked to at the top. Hopefully, I will have some more interesting projects to post soon.
