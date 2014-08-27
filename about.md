@@ -1,11 +1,12 @@
 ---
 layout: page
 title: About
+comments: false
 ---
+<img style="float:left;padding-right:15px" src="/assets/img/profile.jpg" width="160" />
 
-Having spent many years within the comfy confines of MATLAB, I have finally started exploring the wide world of possibilites that exist outside of that expensive IDE. I invite you to come along with me while I document my journey into the great, open source, unknown.
+My name is Ethan Rosenthal, and I am currently a sixth-year PhD student studying experimental condensed matter physics at Columbia University in New York, NY. This blog serves as a public record of anything "data"-related that *piques* my interest ([hence the title of the blog](http://youtu.be/xECUrlnXCqk)).
 
-My name is Ethan Rosenthal, and I am currently a sixth-year PhD student studying experimental condensed matter physics at Columbia University in New York, NY.
 
 For more information about my academic research, check out my [website](http://ethanrosenthal.com).
 
