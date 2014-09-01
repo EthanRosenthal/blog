@@ -84,7 +84,7 @@ sapi.filter(track=['bonnaroo','bonaroo','bonarroo','bonnarroo']) # Get all mispe
 ```
 Remember those API keys that you got for your Twitter app? You should set the `consumer_key` and `consumer_secret` variables equal to the "API key" and "API secret" codes, respectively. Likewise, the "Access token" and "Access token secret" codes should be mapped to the `access_token` and `access_token_secret` variables. Make sure to omit your tokens if you ever share your code (as I've done above).
 
-The above code creates an object that records any tweet that contains any of the strings that I have listed in the bottom line. Four properties of the tweet are recorded: the text, the date and time, the GPS location (if given), and the source (Twitter client) of the tweet. These five properties are collected in a dictionary variable called `data` and inserted into a MongoDB database.
+The above code creates an object that records any tweet that contains any of the strings that I have listed in the bottom line. Four properties of the tweet are recorded: the text, the date and time, the GPS location (if given), and the source (Twitter client) of the tweet. These four properties are collected in a dictionary variable called `data` and inserted into a MongoDB database.
 
 Why MongoDB? Because NoSQL is the new SQL? No, because MongoDB is what the code that I copied used. The code uses [PyMongo](http://api.mongodb.org/python/current/), a Python library for interacting with MongoDB. For this application, I do not think that it really matters what type of database you use - you could just as well use MySQL or something.
 
