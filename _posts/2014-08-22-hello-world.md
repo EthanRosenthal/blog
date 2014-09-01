@@ -67,4 +67,4 @@ I also added a CNAME file to the blog repo containing the line "blog.ethanrosent
 
 ## Lastly
 
-There are a couple other things that I have done, like adding an [Archive]({{site.url}}/archive/) section and Google Analytics tracking, but these tasks have been documented the blog posts that I linked to at the top. Hopefully, I will have some more interesting projects to post soon.
+There are a couple other things that I have done, like adding an [Archive]({{site.url}}/archive/) section and Google Analytics tracking, but these tasks have been documented in the blog posts that I linked to at the top. Hopefully, I will have some more interesting projects to post soon.
