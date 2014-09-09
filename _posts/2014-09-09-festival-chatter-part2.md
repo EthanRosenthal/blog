@@ -7,7 +7,7 @@ In my previous [post]({{page.previous.url}}), I wrote about how I collected twee
 
 + Do people spell worse as they become more intoxicated throughout the night?
 + Does text [sentiment](http://en.wikipedia.org/wiki/Sentiment_analysis) decline as people go more days without bathing?
-+ ADD SOMETHING ELSE HERE
++ Who in the world tweets from a laptop during a music festival?
 
 I would honestly love to answer the above questions (and plan to), but I will focus on the most obvious question for this post:
 
@@ -15,7 +15,7 @@ I would honestly love to answer the above questions (and plan to), but I will fo
 
 And while this question seems simple to answer, there are many reasons this blog post is so long. To start, we do not even have a decent definition of the question!
 
-What does it mean for an artist to be the most popular as measured by tweets? For now, let's work off of the oldest rule of PR: "Any publicity is good publicity". In that case, we shall rank band popularity by the number of tweets that mention each artist. Let's try to do this and see what happens.
+What does it mean for an artist to be the most popular as measured by tweets? For now, let's work off of the oldest rule of PR: "Any publicity is good publicity". In that case, we shall rank band popularity simply by the number of tweets that mention each artist. Let's try to do this and see what happens.
 
 ## Of Pythons and Pandas
 
@@ -42,7 +42,7 @@ source        157600
 text          157600
 dtype: int64
 ```
-While watching the tweets stream in, I noticed that there are a lot of retweets. To me, these do not seem as "organic" as a bona-fide original tweet. People can spam twitter all they want with retweets, but it is more difficult to spam with original tweets. So, I think a more robust measure of band popularity is *unique* tweets. Pandas allows us to easily investigate this:
+While watching the tweets stream in, I noticed that there are a lot of retweets. To me, these do not seem as "organic" as a bona-fide, original tweet. People and software can spam twitter all they want with retweets, but it is more difficult to spam with original tweets. So, I think a more robust measure of band popularity is *unique* tweets. Pandas allows us to easily investigate this:
 
 ```python
 df['text'].describe()
@@ -99,7 +99,7 @@ There we go: we have gone from 157,600 total tweets to 93,311 "organic" tweets. 
 
 Now that I have grouped together all of the tweets that we care to investigate, we must search for mentions of each Bonnaroo artist. But I am lazy. There are *189* different artists performing at Bonnaroo, and by no means do I feel like typing them all out.
 
-Enter [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/), a Python library for scraping websites. All I have to do is check out the band lineup on the Bonnaroo website, figure out which ```div``` elements correspond to the listed bands, and BeautifulSoup will grab the contents.
+Enter [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/), a Python library for scraping websites. All I have to do is check out the band lineup on the Bonnaroo website, figure out which ```div``` elements correspond to the listed bands, and *BeautifulSoup* will grab the contents.
 
 ```python
 import urllib2
@@ -119,11 +119,11 @@ fout.close()
 
 ## With a Little Help from my (API) Friends
 
-When I wrote the above script, I thought I was done. Later on, I thought about the fact that people do not always call bands by their full name. For example, the Red Hot Chili Peppers are often abbreviated RHCP. I was amazed when I found that [MusicBrainz](https://musicbrainz.org/), an online music encyclopedia, not only keeps track of bands' aliases, but MusicBrainz actually has an API for accessing this information. Even better, somebody created a [Python wrapper](http://python-musicbrainzngs.readthedocs.org/en/latest/) for the API.
+When I wrote the above script, I thought I was done. Later on, I thought about the fact that people do not always call bands by their full name. For example, the Red Hot Chili Peppers are often abbreviated RHCP. I was amazed when I found that [MusicBrainz](https://musicbrainz.org/), an online music encyclopedia, not only keeps track of bands' aliases and mispellings, but MusicBrainz actually has an API for accessing this information. Even better, somebody created a [Python wrapper](http://python-musicbrainzngs.readthedocs.org/en/latest/) for the API.
 
 I also had to perform some "scrubbing" of the aliases that are retrieved from the MusicBrainz API. I consider that a band is "mentioned" in a tweet if all words in any of the band's aliases are present in the tweet text. For example, a match for both "arctic" and "monkeys" in the text would be a mention of "Arctic Monkeys". However, I do not want to miss a mention of "The Flaming Lips" because "the" is not included.
 
-I ameliorated this issue by using [nltk](http://www.nltk.org/), a Natural Language Processing library. The library contains a list of English stopwords (common words like "the") which I used as a filter. Note: This may be an issue for bands like "The Head and the Heart".
+I ameliorated this issue by using [nltk](http://www.nltk.org/), a Natural Language Processing library. The library contains a list of English stopwords (common words like "the") which I used as a filter. **Note**: This may be an issue for bands like "The Head and the Heart" where the filter would leave behind "head" and "heart". Both these words could easily be in a tweet and not relate to the band.
 
 The code below shows how I used the public API's and *nltk* in order to get searchable aliases.
 
@@ -189,7 +189,7 @@ fin.close()
 
 Ok, so we now have a dictionary of *easily searchable* aliases for all artists that performed at Bonnaroo. All we have to do now is go through each tweet and see if any of the aliases for any of the artists are mentioned. We can then build a histogram of "mentions" for each artist by adding up all of the mentions in all of the tweets for a given artist.
 
-In the code below, I do just this. By running the function at the bottom, ```get_bandPop```, we get a pandas Series in return that contains each artist and the number of times they were mentioned in all of the tweets.
+In the code below, I do just this. By running the function at the bottom, ```get_bandPop```, we get a *pandas* Series in return that contains each artist and the number of times they were mentioned in all of the tweets.
 
 ```python
 # To be used for removing punctuation
@@ -241,8 +241,6 @@ def build_apply_fun(alias_dict):
     apply_fun = lambda x : check_each_alias(x, alias_dict)
     return apply_fun
 
-
-
 def get_bandPop(df, alias_dict):
     """
     For tweet DataFrame input "df", build histogram of of mentions
@@ -254,7 +252,7 @@ def get_bandPop(df, alias_dict):
     return bandPop
 
 ```
-And now, finally, all we have to do is type ```bandPop[:10].plot(kind='bar')``` (and maybe fiddle around in matplotlib for an hour adjusting properties of the figure) and we get a histogram of mentions for the top ten most popular bands at Bonnaroo:
+And now, finally, all we have to do is type ```bandPop[:10].plot(kind='bar')``` (and maybe fiddle around in *matplotlib* for an hour adjusting properties of the figure) and we get a histogram of mentions for the top ten most popular bands at Bonnaroo:
 
 ![Top Ten Bands]({{ site.url }}/assets/img/bandPop_top10.png)
 
