@@ -4,7 +4,8 @@ title: About
 ---
 <img style="float:left;padding-right:15px" src="/assets/img/profile_sketch_thresh.jpg" width="160" />
 
-My name is Ethan Rosenthal, and I am a data scientist at [Birchbox](http://www.birchbox.com). Before this, I got a PhD in physics from Columbia University. This blog serves as a public record of anything "data"-related that *piques* my interest ([hence the title of the blog](http://youtu.be/xECUrlnXCqk)).
+My name is Ethan Rosenthal, and I am a data scientist at [Birchbox](http://www.birchbox.com) in NYC. Before this, I got a PhD in physics at Columbia University. This blog serves as a public record of anything "data"-related that *piques* my interest ([hence the title of the blog](http://youtu.be/xECUrlnXCqk)).
+
 
 
 For more information about my academic research, check out my [website](http://ethanrosenthal.com).
