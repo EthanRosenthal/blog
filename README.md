@@ -1,1 +1,1 @@
-This is the repository for my personal blog located at [blog.ethanrosenthal.com](http://blog.ethanrosenthal.com). The blog is hosted by GitHub Project Pages.
+Source for old jekyll blog
